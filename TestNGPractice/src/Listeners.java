@@ -9,7 +9,7 @@ public class Listeners implements ITestListener {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestStart(result);
 		
-		System.out.println("Starting...");
+		System.out.println("Starting..");
 	}
 
 	@Override
