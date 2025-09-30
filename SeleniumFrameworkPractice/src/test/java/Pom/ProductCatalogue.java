@@ -54,7 +54,7 @@ public class ProductCatalogue extends AbstractMethods {
 	public void goToCart() {
 		waitElementInvisibility(spinner);
 		waitElementClickable(cartButton);
-		System.out.println("test");
+		System.out.println("test2");
 		cartButton.click();
 	}
 	
