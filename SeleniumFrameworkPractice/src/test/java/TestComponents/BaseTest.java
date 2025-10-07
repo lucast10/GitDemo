@@ -7,11 +7,13 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -35,7 +37,22 @@ public class BaseTest {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.contentEquals("chrome")) {
-			driver = new ChromeDriver();
+		
+			
+			ChromeOptions options = new ChromeOptions();
+
+			// Disable password manager and autofill
+			Map<String, Object> prefs = new HashMap<>();
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+
+			options.setExperimentalOption("prefs", prefs);
+
+			// Optional: start fresh every time
+			options.addArguments("--incognito");
+
+			// Set the options in your ChromeDriver
+			driver = new ChromeDriver(options);
 		}
 		else if(browserName.contentEquals("firefox")) {
 			driver = new FirefoxDriver();

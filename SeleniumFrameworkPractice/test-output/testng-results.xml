@@ -1,120 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-24T11:53:57 ART" name="Default suite" finished-at="2025-09-24T11:55:58 ART" duration-ms="121270">
+  <suite started-at="2025-10-07T18:03:18 ART" name="Default suite" finished-at="2025-10-07T18:04:29 ART" duration-ms="70919">
     <groups>
-      <group name="Purchase">
-        <method signature="StandAloneTest.submitOrder(java.util.HashMap)[pri:0, instance:Pom.StandAloneTest@563f38c4]" name="submitOrder" class="Pom.StandAloneTest"/>
-      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2025-09-24T11:53:57 ART" name="Default test" finished-at="2025-09-24T11:55:58 ART" duration-ms="121270">
+    <test started-at="2025-10-07T18:03:18 ART" name="Default test" finished-at="2025-10-07T18:04:29 ART" duration-ms="70919">
       <class name="Pom.StandAloneTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:53:57 ART" name="launchApplication" finished-at="2025-09-24T11:54:06 ART" duration-ms="9241" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Pom.StandAloneTest@5b7a5baa]" started-at="2025-10-07T18:03:19 ART" name="launchApplication" finished-at="2025-10-07T18:03:29 ART" duration-ms="10099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:54:06 ART" name="submitOrder" data-provider="getData" finished-at="2025-09-24T11:54:16 ART" duration-ms="10292" status="FAIL">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Pom.StandAloneTest@5b7a5baa]" started-at="2025-10-07T18:03:29 ART" name="submitOrder" data-provider="getData" finished-at="2025-10-07T18:03:54 ART" duration-ms="24985" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{productName2=ADIDAS ORIGINAL, countryName=Argentina, message=thankyou for the order., pass=testing, email=test@test.com, productName=ZARA COAT 3}]]>
+                <![CDATA[{password=test, product=ZARA COAT 3, countryName=Argentina, message=thankyou for the order., email=test@test.com}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class, 'mb-3')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\LUCIAN~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49680}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49680/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 73aa68ac49e02088f918fcd4e8cf55d6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class, 'mb-3')] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\LUCIAN~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49680}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49680/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 73aa68ac49e02088f918fcd4e8cf55d6
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at Inheritance.AbstractMethods.waitElementVisibility(AbstractMethods.java:27)
-at Pom.ProductCatalogue.getProductList(ProductCatalogue.java:36)
-at Pom.ProductCatalogue.getProduct(ProductCatalogue.java:42)
-at Pom.StandAloneTest.submitOrder(StandAloneTest.java:69)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="driverClose()[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:54:16 ART" name="driverClose" finished-at="2025-09-24T11:54:18 ART" duration-ms="1807" status="PASS">
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:Pom.StandAloneTest@5b7a5baa]" started-at="2025-10-07T18:03:54 ART" name="driverClose" finished-at="2025-10-07T18:03:54 ART" duration-ms="525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:54:18 ART" name="launchApplication" finished-at="2025-09-24T11:54:25 ART" duration-ms="6430" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Pom.StandAloneTest@5b7a5baa]" started-at="2025-10-07T18:03:54 ART" name="launchApplication" finished-at="2025-10-07T18:04:02 ART" duration-ms="8029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:54:25 ART" name="submitOrder" data-provider="getData" finished-at="2025-09-24T11:55:07 ART" duration-ms="42878" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Pom.StandAloneTest@5b7a5baa]" started-at="2025-10-07T18:04:02 ART" name="submitOrder" data-provider="getData" finished-at="2025-10-07T18:04:29 ART" duration-ms="26336" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{productName2=ADIDAS ORIGINAL, countryName=Argentina, message=thankyou for the order., pass=testing, email=test@test.com, productName=ZARA COAT 3}]]>
+                <![CDATA[{password=test, product=ADIDAS ORIGINAL, countryName=Argentina, message=thankyou for the order., email=test2@test.com}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="driverClose()[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:55:07 ART" name="driverClose" finished-at="2025-09-24T11:55:08 ART" duration-ms="344" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverClose -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:55:08 ART" name="launchApplication" finished-at="2025-09-24T11:55:15 ART" duration-ms="6918" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:55:15 ART" name="submitOrder" data-provider="getData" finished-at="2025-09-24T11:55:58 ART" duration-ms="43009" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{productName2=ADIDAS ORIGINAL, countryName=Argentina, message=thankyou for the order., pass=testing, email=test@test.com, productName=ZARA COAT 3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="driverClose()[pri:0, instance:Pom.StandAloneTest@563f38c4]" started-at="2025-09-24T11:55:58 ART" name="driverClose" finished-at="2025-09-24T11:55:58 ART" duration-ms="289" status="PASS">
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:Pom.StandAloneTest@5b7a5baa]" started-at="2025-10-07T18:04:29 ART" name="driverClose" finished-at="2025-10-07T18:04:29 ART" duration-ms="362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->

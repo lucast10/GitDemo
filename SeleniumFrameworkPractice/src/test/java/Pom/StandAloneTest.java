@@ -79,23 +79,21 @@ public class StandAloneTest extends BaseTest {
 		return file;
 	}
 	
-	@Test(dataProvider = "getData", groups = {"Purchase"})
+	@Test(dataProvider = "getData") //, groups = {"Purchase"}
 	public void submitOrder(HashMap<String,String> input) throws IOException {
 		
 		//String productName = "ZARA COAT 3";
 		//String productName2 = "ADIDAS ORIGINAL";
 		//String countryName = "Argentina";
 		
-		loginPage.loginAs(input.get("email"), input.get("pass"));
+		loginPage.loginAs(input.get("email"), input.get("password"));
 		ProductCatalogue products = new ProductCatalogue(driver);
-		products.getProduct(input.get("productName"));
-		products.addProductToCart(input.get("productName"));
-		products.getProduct(input.get("productName2"));
-		products.addProductToCart(input.get("productName2"));
+		products.getProduct(input.get("product"));
+		products.addProductToCart(input.get("product"));
 		products.goToCart();
 		Cart cart = new Cart(driver);
 		cart.getCartItems();
-		cart.verifyCartItem(input.get("productName"));
+		cart.verifyCartItem(input.get("product"));
 		cart.checkOut();
 		Payment pay = new Payment(driver);
 		pay.selectCountry(input.get("countryName"));

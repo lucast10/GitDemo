@@ -1,13 +1,17 @@
 [
 	{
 		"email" : "test@test.com",
-		"password" : "testing",
-		"product" : "ZARA COAT 3"
+		"password" : "test",
+		"product" : "ZARA COAT 3",
+		"countryName" : "Argentina",
+		"message" : "thankyou for the order."
 	},
 	
 	{
 		"email" : "test2@test.com",
-		"password" : "testing2",
-		"product" : "ADIDAS ORIGINAL"
+		"password" : "test",
+		"product" : "ADIDAS ORIGINAL",
+		"countryName" : "Argentina"	,
+		"message" : "thankyou for the order."
 	}
 ]
